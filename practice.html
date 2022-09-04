@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1>
+    Loading...
+  </h1>
+  <button class="loaded-button">loaded</button>
+  <button class="call-api">loaded</button>
+  <p class="api-response"></p>
+
+ <input type="text" class="passwordcheck"/>
+ <button class="checkpass">check button</button>
+  
+</body>
+<script>
+
+  var inputOne=document.querySelector('.passwordcheck')
+  var checkBtn=document.querySelector('.checkpass')
+
+  checkBtn.addEventListener('click',function() {
+//  var input=inputOne.value;
+
+    if(inputOne.value.length<=8){
+      console.log('value should be greater value')
+      inputOne.style.border="1px solid red"
+    }else{
+      console.log('value is ok  ')
+      inputOne.style.border="1px solid green"
+      inputOne.style.display="none"
+    }
+  })
+var callApiBtn = document.querySelector('.call-api')
+var apiRes = document.querySelector('.api-response')
+// https://api.funtranslations.com/translate/irate.json?text=Hello%20sir%21%20my%20mother%20goes%20with%20me%20to%20the%20ocean.
+
+function calltheApi() {
+  fetch(`https://api.funtranslations.com/translate/minion.json?text=${"My name is mohd imran"} `).then(response =>
+    response.json()
+).then(json => {
+    console.log(json)
+    var trans=json.contents.translated;
+     apiRes.innerText=trans;
+     apiRes.style.textTransform="capitalize"
+  }
+  ).catch(error => {
+    console.log(error)
+  })
+}
+callApiBtn.addEventListener("click", calltheApi);
+
+
+
+</script>
+</html>
