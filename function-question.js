@@ -86,6 +86,16 @@ function minDate(a,b) {
        }
        return b
 }
-
-
 console.log(minDate('22/05/2022', '21/09/2021'))
+
+
+// Given a sentence, return a sentence with first letter of all words as capital.
+//  Example:
+// Input: toSentenceCase('we are neoGrammers') ––> Output: We Are NeoGrammers
+// const firstSmall='we are neoGrammers';
+// const makeArray=firstSmall.split('');
+// for (var i = 0; i < makeArray.length; i++) {
+//       makeArray[i]= makeArray[i].charAt(0).toUpperCase() + makeArray[i].slice(1);
+// }
+// const jon=makeArray.join('');
+// console.log(jon);

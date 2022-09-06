@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Write a JavaScript program to calculate the simple interest given P,R,T with the given formula. Formula: SI = (P * T * R) / 100 Where: P = principal amount T = time R = rate SI = simple interest -->
+   <section>
+    <label for="principal-amount">Principlal Amount</label><br>
+    <input type="number" class="principal-amount"><br>
+
+    <label for="time">Time</label><br>
+    <input type="number" class="time"><br>
+
+    <label for="rate">Rate</label><br>
+    <input type="number" class="rate"><br>
+
+    <button class="check">Check Simple Interest</button>
+    <p class="output">
+
+    </p>
+   </section>
+<script>
+    const principalAmount=document.querySelector('.principal-amount');
+    const Time=document.querySelector('.time');
+    const Rate=document.querySelector('.rate');
+    const checkBtn=document.querySelector('.check')
+    const Output= document.querySelector('.output');
+
+
+  checkBtn.addEventListener('click',function(){
+    if((principalAmount.value && Time.value && Rate.value) == ''){
+        Output.innerText="Fill the all fields"
+    }else if((principalAmount.value && Time.value && Rate.value)<=0){
+        Output.innerText="Fill the all positive and greater then zero"
+        
+    }else{
+        const result= (Number(principalAmount.value) * Number(Time.value) * Number(Rate.value))/100;
+      Output.innerText=result
+    }
+})
+</script>
+  
+<script>
+    // 3. Write a program to calculate the kinetic energy of a body with mass 'm' and volume 'v'.
+    // Formula :  0.5 * m * v * v
+
+    function calculateK(m,v) {
+        var cal=0.5 * m * v * v;
+        return cal;
+    }
+   console.log( calculateK(10,2))
+
+</script>
+
+</body>
+</html>
