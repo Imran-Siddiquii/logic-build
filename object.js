@@ -109,29 +109,29 @@ function haxz(number) {
 //  console.log(countNumber(str));
 
 // find min with rest perameter
- function minNumber(...number) {
-     let min=number[0]
-     for (let i = 0; i < number.length; i++) {
-        if(number[i] < min){
-            min=number[i]
-        }
-    }
-    return min
- }
- console.log(minNumber(10,12,625,7))
+//  function minNumber(...number) {
+//      let min=number[0]
+//      for (let i = 0; i < number.length; i++) {
+//         if(number[i] < min){
+//             min=number[i]
+//         }
+//     }
+//     return min
+//  }
+//  console.log(minNumber(10,12,625,7))
 
 //find max with rest perameter
 
-function max(...num) {
-    let max=0;
-    for (let i = 0; i < num.length; i++) {
-         if(num[i]>max){
-            max=num[i]
-         }
-        }
-        return max;
-}
-console.log(max(60,45,121,30,78))
+// function max(...num) {
+//     let max=0;
+//     for (let i = 0; i < num.length; i++) {
+//          if(num[i]>max){
+//             max=num[i]
+//          }
+//         }
+//         return max;
+// }
+// console.log(max(60,45,121,30,78))
 
 // Given three angles of a triange, your function should return if it is a scalene, isosceles, equilateral triangle or not a triangle at all. Example:
 // Input: typeOfTriangle(30, 60, 90) ––> Output: Scalene Triangle
@@ -139,22 +139,84 @@ console.log(max(60,45,121,30,78))
 // side should be different  sum 180
 //isosceles only two side are equal and  sum 180
 
-function triangle(a,b,c) {
-    if(a===b && b===c && c===a){
-       if(a+b+c==180){
-           console.log("this is equilateral triangle")
-        }
-    }else if((a==b || b==c) || (a==c || b==c)){
-         if(a+b+c==180){
-            console.log('this is isosceles')
-         }
-        }
-        else if(a+b+c==180){
-          console.log("this is a Scalena")
-        }
-      else{
-        console.log("this is not a triangle")
-      }
-}
-triangle(30,60,90)
+// function triangle(a,b,c) {
+//     if(a===b && b===c && c===a){
+//        if(a+b+c==180){
+//            console.log("this is equilateral triangle")
+//         }
+//     }else if((a==b || b==c) || (a==c || b==c)){
+//          if(a+b+c==180){
+//             console.log('this is isosceles')
+//          }
+//         }
+//         else if(a+b+c==180){
+//           console.log("this is a Scalena")
+//         }
+//       else{
+//         console.log("this is not a triangle")
+//       }
+// }
+// triangle(30,60,90)
+ 
+ // medium
 
+// Given an array, your function should return the length of the array.
+// Example:
+// Input: arrayLength([1,5,3,7,8]) ––> Output: 5
+
+// var items=[5,78,62,45,"Rohan",{name:"sunil",age:"5"},"delhi"]
+// console.log(items.length)
+
+// Given an array and an item, your function should return the index at which the item is present.
+// Example:
+// Input: indexOf([1,6,3,5,8,9], 3) ––> Output: 2
+
+var item=[5,0,32,47,78,14];
+
+// var indexof =item.findIndex(ele=>
+//     ele==47
+// );
+
+var indexof =item.indexOf(47);
+console.log(indexof);
+
+
+// function findItem(item) {
+//     for (let i = 0; i < item.length; i++) {
+                 
+//     }
+// }
+// findItem(item)
+
+// Given an array and two numbers, your function should replace all entries of first number in an array with the second number.
+// Example: Input: replace([1,5,3,5,6,8], 5, 10) ––> Output: [1,10,3,10,6,8]
+
+ var number=[1,5,3,5,6,8];
+ 
+ function replsace(number) {
+    var newArray=[]
+    for (let i = 0; i < number.length; i++) {
+        var rep=number[i].toString();
+        var sap=rep.replaceAll(5,10);
+       parseInt(newArray.push(sap))
+
+    }
+    return newArray
+        }
+
+        var rahul = "red"
+       console.log(rahul.split('').reverse().join(''))
+
+
+
+        function palindrome(a) {
+            var revers =a.split('').reverse().join('');
+            if(a===revers){
+                console.log("this is palindrome")
+            }else{
+                console.log ("this is not palinddrom")
+            }
+        }
+            
+  palindrome("lal")
+// console.log( replace(number))
