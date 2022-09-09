@@ -46,13 +46,45 @@
 // 3
 // 1
 
-function printOdd(num) {
-    for (let i = 0; i < num; i++) {
-        if(num%2 !== 0){
-        console.log(i);
-        }
-        
-    }
-}
+//given number is prime or not 
 
-printOdd(4);
+//  var num=15;
+// var isprime=true;
+
+//   if(num>2){
+//       for(i=2; i<5;i++){
+//           if(num%i==0){
+//               isprime=false
+//           }
+
+//         }
+//   } else
+//    console.log("number sholud be great then zero")   
+
+//     if(isprime){
+//     console.log("number is prime")
+//   }else console.log("number is not prime")
+
+
+  
+function primenumber(num2) {
+    var Isprime=true;
+    debugger;
+     for(i=2;i<num2;i++){
+        if(num2%i==0){
+            Isprime=false;
+        }
+     }
+     if(Isprime){
+        console.log("number is prime");
+     }else console.log("number is not prime")
+  }
+  primenumber(67);
+  primenumber(20);
+  primenumber(101);
+  primenumber(71);
+
+  for(i=0;i<2;i++){
+    console.log("imran")
+  }
+    
