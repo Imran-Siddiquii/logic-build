@@ -242,74 +242,52 @@ const totalNumberOfItem=(cartItems)=>{
         totalItem = totalItem + cartItems[i].count
     totalCartValue= totalCartValue + cartItems[i].count * cartItems[i].price;
 }
-console.log("total item number in cart " + totalItem);
+return totalItem;
 }
-totalNumberOfItem(cartItems)
-
 
 var totalCartValue=0;
-
 function totalItemValue(cartItems) {
     for(i=0; i<cartItems.length;i++){
-    totalCartValue=totalCartValue + cartItems[i].count * cartItems[i].price;
+        totalCartValue=totalCartValue + cartItems[i].count * cartItems[i].price;
     }
-    // console.log(totalCartValue);
+    console.log(totalCartValue);
     return totalCartValue;
 }
-totalItemValue(cartItems)
 
-
+const valueinprice=totalItemValue(cartItems);
+console.log("total value of item" + valueinprice);
+ 
 
 // // the total discounted value(sum of dicounted values on each item) based on the given discount
   var discountvalue=0
 function totaldiscount(cartItems) {
     for (let i = 0; i < cartItems.length; i++) {
-        discountvalue=discountvalue + (cartItems[i].count  * cartItems[i].discount)
+        discountvalue=discountvalue + (cartItems[i].count * cartItems[i].price  * cartItems[i].discount)
     }
-    console.log(discountvalue);
     return discountvalue;
 }
-        
-
-
-totaldiscount(cartItems);
-
 // total tax amount (18% tax, calculated on total cart value)
+
+
 
 var totaltaxAmout=0
 var valueOfcart =0;
+
+
 function textAmount(totalvalue,discount) {
-    actualvalue=totalvalue-discount;
-    
-    console.log("this" + actualvalue);
-  
-   totaltaxAmount=(actualvalue * 18)/100;
-   console.log(totaltaxAmount);
-valueOfcart= actualvalue + totaltaxAmount
-    console.log(valueOfcart);
+//discount value-totalvalue
+    actualvalue=totalvalue - discount;
+    // console.log("this is total value" +totalvalue);
+    // console.log("rhis value" +actualvalue);
+// 18% on actual value
+    totaltaxAmount=(actualvalue * 18)/100;
+
+    valueOfcart= actualvalue + totaltaxAmount;
+    // console.log(valueOfcart)
+    return valueOfcart
 }
 
+console.log("Total item is cart" + totalNumberOfItem(cartItems))
 
-
-textAmount(totalItemValue(cartItems),totaldiscount(cartItems))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log("total discount"  + totaldiscount(cartItems))
+console.log("total pay able amount with GST " + " " +textAmount(valueinprice,totaldiscount(cartItems)))
