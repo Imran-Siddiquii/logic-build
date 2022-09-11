@@ -119,19 +119,34 @@ var character="I am will a good person";
 
 // Shift an array by X to right. - Example [1,2,3,4,5] after shifting to right [5,1,2,3,4]
   
-var arrayNumber=[1,2,3,4,8,6,48,54,74,21];
-function arrays(array,n) {
- for (let i = 0; i < n; i++) {
-    num1=array[array.length-1]
+// var arrayNumber=[1,2,3,4,8,6,48,54,74,21];
+// function arrays(array,n) {
+//  for (let i = 0; i < n; i++) {
+//     num1=array[array.length-1]
+//     array.pop();
+//     array.unshift(num1)
+// }   
+// return array;
+// }
+// console.log( arrays(arrayNumber,5))        
+
+
+
+  //Write a JavaScript program to rotate the string 'w3resource' in right direction by periodically removing one letter from the end of the string and attaching it to the front.
+  
+  var string = 'w3resource';
+
+
+function reverseOneChar(string){
+    var array = string.split('')
+    num=string[string.length-1];
     array.pop();
-    array.unshift(num1)
-}   
-return array;
+ array.unshift(num)
+ var string=array.toString()
+var repl= string.replaceAll(',','')
+ return repl;
 }
-console.log( arrays(arrayNumber,5))        
-
-
-        
+console.log(reverseOneChar(string));
     
 
 

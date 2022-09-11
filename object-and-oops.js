@@ -132,11 +132,11 @@ const studentDetails = [
    } 
      
 
-    // student(studentDetails);     
-    // lowestMarks(studentTotalMark);       
-    // highestMarks(studentTotalMark);     
-    // computerAvarege(studentDetails);
-    // passStudent(passList)
+    student(studentDetails);     
+    lowestMarks(studentTotalMark);       
+    highestMarks(studentTotalMark);     
+    computerAvarege(studentDetails);
+    passStudent(passList)
           
    
    
@@ -149,22 +149,22 @@ const studentDetails = [
            
 
 
-//    class Employees{
-//     constructor(name,id,basic,hra,allowance){
-//         this.name=name;
-//         this.id=id;
-//         this.basic=basic
-//         this.hra=hra;
-//         this.allowance=allowance
-//     }
-//    get getSalary() {
-//         return this.basic + this.hra+ this.allowance
-//     }
-//    } 
+   class Employees{
+    constructor(name,id,basic,hra,allowance){
+        this.name=name;
+        this.id=id;
+        this.basic=basic
+        this.hra=hra;
+        this.allowance=allowance
+    }
+   get getSalary() {
+        return this.basic + this.hra+ this.allowance
+    }
+   } 
   
-//    const Employee=new Employees("imran",2,300,45,60)
+   const Employee=new Employees("imran",2,300,45,60)
 
-//    console.log(Employee.getSalary);
+   console.log(Employee.getSalary);
 
 
 
